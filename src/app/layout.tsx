@@ -20,10 +20,8 @@ type RootLayoutProps = {
 const RootLayout: FC<RootLayoutProps> = ({ children }) => {
   return (
     <html lang="en" className={cn('bg-gray-950', inter.className)}>
-      <body>
-        <main className="container mx-auto flex bg-gray-950 text-gray-200">
-          {children}
-        </main>
+      <body className="bg-gray-950 text-gray-200">
+        <main className="container mx-auto flex">{children}</main>
       </body>
     </html>
   );
