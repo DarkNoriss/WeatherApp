@@ -1,5 +1,5 @@
-const Page = () => {
-  return <span className="">Boilerplate</span>;
+const Page = async () => {
+  return <span>Main page</span>;
 };
 
 export default Page;
