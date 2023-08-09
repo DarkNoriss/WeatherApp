@@ -9,12 +9,16 @@ export const generateMetadata = async ({ params }: PageProps) => {
 };
 
 const Page = async ({ params }: PageProps) => {
-  const querry = await axios.get(
+  const { data, status } = await axios.get(
     `https://api.weatherapi.com/v1/current.json?key=${process.env.API_KEY}&q=${params.location}&aqi=no`,
   );
 
-  const { location, current } = querry.data;
+  console.log(`status: ${status}`);
+  // if (status) return <span>Error!</span>;
 
+  const { location, current } = data;
+
+  // if(status === "")
   return (
     <div className="flex flex-col items-center space-y-2 text-center text-2xl font-bold">
       <span className="text-6xl">{location.name}</span>
