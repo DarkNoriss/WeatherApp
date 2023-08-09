@@ -2,6 +2,7 @@ import '@/styles/global.css';
 
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+import { Suspense } from 'react';
 
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
@@ -25,7 +26,7 @@ const RootLayout = async ({ children }: RootLayoutProps) => {
         <main className="container relative mx-auto flex min-h-screen flex-col">
           <Header />
           <div className="flex grow items-center justify-center">
-            {children}
+            <Suspense>{children}</Suspense>
           </div>
           <Footer />
         </main>
