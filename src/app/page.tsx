@@ -1,5 +1,5 @@
 const Page = async () => {
-  return <span>Main page</span>;
+  return <span className="text-4xl">Start by typing city name above!</span>;
 };
 
 export default Page;
