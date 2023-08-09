@@ -12,4 +12,7 @@ module.exports = withBundleAnalyzer({
   trailingSlash: true,
   basePath: '',
   reactStrictMode: true,
+  experimental: {
+    serverActions: true,
+  },
 });
