@@ -7,12 +7,14 @@ module.exports = withBundleAnalyzer({
   eslint: {
     dirs: ['.'],
   },
-  output: 'export',
   poweredByHeader: false,
   trailingSlash: true,
   basePath: '',
   reactStrictMode: true,
   experimental: {
     serverActions: true,
+  },
+  images: {
+    domains: ['cdn.weatherapi.com'],
   },
 });
