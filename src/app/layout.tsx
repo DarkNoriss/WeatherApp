@@ -10,8 +10,8 @@ import { cn } from '@/lib/utils';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Boilerplate',
-  description: 'NEXTjs Boilerplate',
+  title: 'WeatherApp',
+  description: 'WeatherApp',
 };
 
 type RootLayoutProps = {
