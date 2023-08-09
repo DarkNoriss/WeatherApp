@@ -1,6 +1,5 @@
-// import axios from 'axios';
-
 import axios from 'axios';
+import Image from 'next/image';
 
 type PageProps = {
   params: { location: string };
@@ -16,6 +15,7 @@ const Page = async ({ params }: PageProps) => {
   return (
     <div className="flex flex-col text-center">
       <p>{location.name}</p>
+      <Image src={current.condition.icon} alt="weather icon" />
       <p>{current.temp_c}</p>
     </div>
   );
