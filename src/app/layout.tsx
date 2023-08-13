@@ -11,8 +11,9 @@ import { cn } from '@/lib/utils';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'WeatherApp',
-  description: 'WeatherApp',
+  title: 'Weather App',
+  description:
+    'Weather App is a comprehensive and user-friendly weather application that provides accurate and up-to-date weather information for locations around the world. Stay informed about current conditions, forecasts, and more with this intuitive weather app.',
 };
 
 type RootLayoutProps = {
