@@ -66,7 +66,7 @@
     "rimraf": "^5.0.1",
     "semantic-release": "^19.0.5",
     "start-server-and-test": "^2.0.0",
-    "tailwindcss": "^3.3.3",
+    "tailwindcss": "0.0.0-insiders.77ae724",
     "typescript": "^4.9.5"
   },
   "config": {
