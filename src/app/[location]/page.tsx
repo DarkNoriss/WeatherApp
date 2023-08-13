@@ -21,7 +21,7 @@ export const generateMetadata = async ({ params }: PageProps) => {
   const { data } = await getData(params.location);
 
   if (data === undefined) {
-    return { title: 'Invalid location' };
+    return { title: 'Location Not Found' };
   }
 
   const { location } = data;
@@ -35,7 +35,17 @@ const Page = async ({ params }: PageProps) => {
   const { data } = await getData(params.location);
 
   if (data === undefined) {
-    return <span className="text-4xl">Invalid location!</span>;
+    return (
+      // eslint-disable-next-line tailwindcss/no-custom-classname
+      <div className="flex max-w-2xl flex-col text-balance text-center text-2xl">
+        <span className="mb-8 text-4xl">Uh-oh! Location Not Found </span>
+        <p>
+          It seems the location you entered couldn&apos;t be matched with any
+          known places. Please verify your entry and try again for us to provide
+          you with the correct weather information.
+        </p>
+      </div>
+    );
   }
 
   const { location, current } = data;
@@ -48,8 +58,8 @@ const Page = async ({ params }: PageProps) => {
       <Image
         src={`https:${current.condition.icon}`}
         alt="weather icon"
-        width={96}
-        height={96}
+        width={64}
+        height={64}
       />
       <span className="">{current.temp_c}°C</span>
       <span className="">{current.condition.text}</span>
