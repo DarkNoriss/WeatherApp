@@ -38,7 +38,9 @@ const Page = async ({ params }: PageProps) => {
     return (
       // eslint-disable-next-line tailwindcss/no-custom-classname
       <div className="flex max-w-2xl flex-col text-balance text-center text-2xl">
-        <span className="mb-8 text-4xl">Uh-oh! Location Not Found </span>
+        <span className="mb-8 text-4xl font-bold">
+          Uh-oh! Location Not Found
+        </span>
         <p>
           It seems the location you entered couldn&apos;t be matched with any
           known places. Please verify your entry and try again for us to provide
